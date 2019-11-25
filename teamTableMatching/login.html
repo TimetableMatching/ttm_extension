@@ -1,0 +1,46 @@
+<html lang="UTF-8">
+<head>
+    <title>Document</title>
+    <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="loginScript.js"></script>
+    <style>
+        #size {
+            height:  2000px;
+            width: 5000px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+       <header>
+           Team Schedule Matching System
+       </header>
+    </div>
+    <div id = "size">
+        <h1>로그인</h1>
+        <table bgcolor = "#cdfdee" cellspacing = "1" >
+            <form action = "" method = "">
+                <tr>
+                    <td text-align="center">ID</td>
+                    <td>
+                        <input type="text" name = "Id" id = "Id">
+                    </td>
+                </tr>
+                <tr>
+                    <td text-align="center">Password</td>
+                    <td>
+                        <input type="password" name = "Password" id = "Password" >
+                    </td>
+                </tr>
+               
+            </form>
+        </table>       
+           
+           <input type = "submit" id = "SignInSubmit" value = "로그인"/>
+            <a href="signUp.html"><button>회원가입</button></a>
+           <!-- <input type = "button" id = "SignUpSubmit" value = "회원가입" onclick="location.href='signUp.html'"/> -->
+    </div>
+</body>
+</html>
