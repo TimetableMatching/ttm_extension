@@ -1,23 +1,34 @@
 $(document).ready(function(){
-
-
-    $('#SingInSubmit').click(function () {
+    //회원가입 버튼 클릭 시
+    $('#SignUpSubmit').click(function(){
         var userId = $("#Id").val();
         var userPassword = $("#Password").val();
-        console.log("true");
-        var allData = { "id" : userId , "Password" : userPassword };
-        // 그 text를 url로 보내고, 평가 항목을 표시하고, 평가를 실시하게 한다.
+        var userOrganization = $("#Organization").val();
+        var userName = $("#Name").val();
+        
+        var allData = {"email":userId, "password":userPassword, "organization":userOrganization};
+        
         $.ajax({
-            url:'13.209.50.215:5000/user',
+            type:"POST",
+            url: "http://13.209.50.215:5000/add_user",
             data: allData,
-            dataType:'json',
-            type:'POST',
+            contentType  : "application/json",
             cache : false,
             processData: false,
-            // text를 보내진게 성공을 하게 된다면, 평가 할목을 표시한다.
             success: function (data) {
-                console.log("success?");
+                console.log(data);
+            },error:function(data){
+                alert("error");
+                console.log(data);
             }
-        });
+        }); 
+        location.href="scheduleReg.html";
+        //alert("회원가입이 완료되었습니다.")
+        console.log(allData);
+    });
+
+    //뒤로가기 버튼 클릭 시
+    $('#GoBackBtn').click(function(){
+        window.history.back();
     });
 });
