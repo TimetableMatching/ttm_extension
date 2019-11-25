@@ -2,7 +2,7 @@
 <head>
     <title>Document</title>
     <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
-    <script src="jquery-3.1.0.min.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
     <script src="signUpScript.js"></script>
 </head>
 <body>
@@ -14,35 +14,36 @@
     <div>
         <h1>회원가입</h1>
         <table bgcolor = "#cdfdee" cellspacing = "1" >
-            <form>
+            <form action="#" accept-charset="utf-8" id="signup_info" method="GET">
                 <tr>
                     <td text-align="center">ID</td>
                     <td>
-                        <input type="number">
+                        <input type="text" id="Id">
                     </td>
                 </tr>
                 <tr>
                     <td text-align="center">Password</td>
                     <td>
-                        <input type="password">
+                        <input type="password" id="Password">
                     </td>
                 </tr>
                 <tr>
                     <td text-align="center">소속</td>
                     <td>
-                        <input type="text">
+                        <input type="text" id="Organization">
                     </td>
                 </tr>
                 <tr>
                     <td text-align="center">이름</td>
                     <td>
-                        <input type="text">
+                        <input type="text" id="Name">
                     </td>
                 </tr>
             </form>
         </table>       
-           
-        <a href="scheduleReg.html"><button>다음</button></a>
+        
+        <input type = "submit" id = "SignUpSubmit" value = "회원가입">
+        <input type = "button" id = "GoBackBtn" value="뒤로가기">
     </div>
 </body>
 </html>
