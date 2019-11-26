@@ -18,7 +18,12 @@ $(document).ready(function(){
             processData: false,
             success: function (data) {
                 console.log(data);
-                location.href="dashboard.html";
+                if(data.status == "1"){
+                    location.href="dashboard.html";
+                }else{
+                    alert("로그인에 실패하셨습니다.");
+                }
+               
             },error:function(data){
                 alert("error");
                 console.log(data);
