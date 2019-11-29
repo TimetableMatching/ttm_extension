@@ -14,36 +14,38 @@
     <div>
         <h1>회원가입</h1>
         <table bgcolor = "#cdfdee" cellspacing = "1" >
-            <form action="#" accept-charset="utf-8" id="signup_info" method="GET">
+            <form action="scheduleReg.html" accept-charset="utf-8" id="signup_info" method="GET">
                 <tr>
                     <td text-align="center">ID</td>
                     <td>
-                        <input type="text" id="Id">
+                        <input type="text" id="Id" name = "Id">
                     </td>
                 </tr>
                 <tr>
                     <td text-align="center">Password</td>
                     <td>
-                        <input type="password" id="Password">
+                        <input type="password" id="Password" name= "Password">
                     </td>
                 </tr>
                 <tr>
                     <td text-align="center">소속</td>
                     <td>
-                        <input type="text" id="Organization">
+                        <input type="text" id="Organization" name = "Organization">
                     </td>
                 </tr>
                 <tr>
                     <td text-align="center">이름</td>
                     <td>
-                        <input type="text" id="Name">
+                        <input type="text" id="Name" name ="Name">
                     </td>
                 </tr>
-            </form>
+            
         </table>       
         
         <input type = "submit" id = "SignUpSubmit" value = "다음">
         <input type = "button" id = "GoBackBtn" value="뒤로가기">
+            
+    </form>
     </div>
 </body>
 </html>
