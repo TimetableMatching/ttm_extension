@@ -7,4 +7,10 @@ $(document).ready(function(){
     $('#dTeamManage').click(function(){
         location.href="teamManage.html";
     });
+    $('td').click(function(){
+        var tr = $(this).closest('tr');
+        if(tr[0].getAttribute("id") == 'teamEntry'){
+            location.href = "team.html"
+        }
+    })
 });

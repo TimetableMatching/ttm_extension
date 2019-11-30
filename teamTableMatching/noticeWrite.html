@@ -4,6 +4,40 @@
     <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <script src="jquery-3.4.1.min.js"></script>
     <script src="signUpScript.js"></script>
+    <style>
+        #main {
+            display : flex;
+            height: 330px;
+            width: 700px;
+            flex-direction: column;
+            margin : 5px;
+        }
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            width : 200px;
+            height: 40px;
+            margin : 5px;
+               
+        }
+        td,th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 5px;
+        }
+        button, input#noticeReg{
+            margin : 5px;
+            width: 70px;
+        }
+        h1{
+            display: inline;
+        }
+        input {
+            margin : 5px;
+        }
+    </style>
 </head>
 <body>
     <div>
@@ -11,8 +45,29 @@
            Team Schedule Matching System
        </header>
     </div>
-    <div>
-        <h1>회원가입</h1>
+    
+    <div id = main>
+        <button>뒤로가기</button>
+        <div>
+            <h1>공지사항 작성</h1>
+        </div>
+        <div id = "dTeamInfo">
+            <table bfcolor = "#cdfdee" cellspacing = "1">
+                <tr>
+                    <td text-align="center">팀 ID</td>
+                    <td text-align="center">222-222</td>
+                </tr>
+                <tr>
+                    <td text-align="center">팀 이름 </td>
+                    <td text-align="center">핸즈온</td>
+                </tr>       
+            </table>
+        </div>
+        <div>
+            <h2>공지사항 내용</h2>
+            <input type="text" id = "notice">
+        </div>
+        <input type="submit" value="등록" id = "noticeReg"> 
     </div>
 </body>
 </html>
