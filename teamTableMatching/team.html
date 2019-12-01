@@ -1,0 +1,233 @@
+<html lang="UTF-8">
+<head>
+    <title>Document</title>
+    <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="team.js"></script>
+    <style type="text/css">
+         #teamMemberList{
+            border : 1px solid black;
+            flex-grow: 1;
+        }
+        #dTeamInfo{
+            border : 1px solid black;
+            flex-grow: 1;
+        }
+        #dNotice{
+            border : 1px solid black;
+            flex-grow: 1;    
+        }
+        #dSchedule{
+            text-align: center;
+            border : 1px solid black;;
+            flex-grow: 1;
+            
+        }
+        #dSchedule *{
+            margin-left: auto; 
+            margin-right: auto;
+        } 
+        #left
+        {
+            width: 50%;
+            display : flex;
+            flex-direction: column;
+        }
+        #right {
+    
+            
+            width : 50%;
+            display : flex;
+            flex-direction: column;
+        }
+        #main {
+            display : flex;
+            height: 550px;
+            width: 700px;
+        }
+        table { 
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+                width : 95%;
+                padding : 3px;
+                margin : 5px;
+          
+            }
+      
+        td,th {
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+                padding: 3px;
+            }
+        button {
+            margin : 5px;
+        }
+        h1 {
+            display: inline;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+       <header>
+           Team Page
+       </header>
+    </div>
+    <div id = "main">
+            <div id = "left"> 
+                    <div id = "teamMemberList">
+                            <button id = "goBeforePage">뒤로가기</button><br>
+                            <h1>팀 원</h1>
+                            <button id = "aginReadschedule">공강 다시 조회</button>
+                            <table bgcolor = "#cdfdee" cellspacing = "1" >
+                                <tr>
+                                    <td>No.</td>
+                                    <td text-align="center">ID</td>
+                                    <td text-align="center">이름</td>
+                                    <td text-align="center">소속</td>
+                                    <td>선택</td>
+            
+                                </tr>
+                                <!--임시-->
+                                <tr>
+                                    <td text-align="center">1</td>
+                                    <td text-align="center">ccc1111</td>
+                                    <td text-align="center">콘</td>
+                                    <td text-align="center">중앙대학교</td>
+                                    <td><input type="checkbox" value="true"><br></td>
+                                
+                                </tr>
+                            </table>       
+                        </div>
+                        <div id = "dNotice">
+                            <h1>공지사항</h1>
+                            <button id = "writeNotice">공지사항 작성</button>
+                            <table bfcolor = "#cdfdee" cellspacing="1">
+                                <tr>
+                                    <td text-align="center">No.</td>
+                                    <td text-align="center">공지내용</td>
+                                    <td text-align="center">이름</td>
+                                    <td text-align="center">날 짜</td>
+                                    <td style=" border : 1px solid white" ></td>
+                                </tr>
+                                <!--공지내용 8자제한-->
+                                <tr>
+                                    <td text-align="center">1</td>
+                                    <td>오늘까지해올것들</td>
+                                    <td text-align="center">무지</td>
+                                    <td text-align="center">19.11.15</td>
+                                    <td style=" border : 1px solid white"><button id = "writeNotice">수정</button></td>
+                                </tr>
+                            </table> 
+                        </div>
+                    
+                        
+            </div>
+             <div id = "right">
+                <div id = "dTeamInfo">
+                    <table bfcolor = "#cdfdee" cellspacing = "1">
+                        <tr>
+                            <td text-align="center">팀 ID</td>
+                            <td text-align="center">222-222</td>
+                        </tr>
+                        <tr>
+                            <td text-align="center">팀 이름 </td>
+                            <td text-align="center">핸즈온</td>
+                        </tr>
+                      
+                    </table>
+                </div>
+                
+                <div id = dSchedule>
+                    <h1>공강 시간표</h1>
+                    <table >
+       
+       
+                        <tr>
+                          <th> </th>
+                          <th>월</th>
+                          <th>화</th>
+                          <th>수</th>
+                          <th>목</th>
+                          <th>금</th>
+                        </tr>
+                          <tr>
+                          <th>1교시</th>
+                          <td value = "11"> </td>
+                          <td value = "12"> </td>
+                          <td value = "13"></td>
+                          <td value = "14"></td>
+                          <td value = "15"></td>
+                         </tr>
+                          <tr>
+                          <th>2교시</th>
+                          <td value = "21"> </td>
+                          <td value = "22"> </td>
+                          <td value = "23"> </td>
+                          <td value = "24"> </td>
+                          <td value = "25"> </td>
+                          
+                        </tr>
+                          <tr>
+                          <th>3교시</th>
+                          <td value = "31"> </td>
+                          <td value = "32"> </td>
+                          <td value = "33"></td>
+                          <td value = "34"></td>
+                          <td value = "35"> </td>
+                        </tr>
+                         <tr>
+                          <th>4교시</th>
+                          <td value = "41"> </td>
+                          <td value = "42"> </td>
+                          <td value = "43"> </td>
+                          <td value = "44"> </td>
+                          <td value = "45"> </td>
+                        </tr>
+                         <tr>
+                          <th>5교시</th>
+                          <td value = "51"> </td>
+                          <td value = "52"> </td>
+                          <td value = "53"> </td>
+                          <td value = "54"> </td>
+                          <td value = "55"> </td>
+                        </tr>
+                         <tr>
+                          <th>6교시</th>
+                          <td value = "61"> </td>
+                          <td value = "62"> </td>
+                          <td value = "63"> </td>
+                          <td value = "64"> </td>
+                          <td value = "65"> </td>
+                        </tr>
+                         <tr>
+                          <th>7교시</th>
+                          <td value = "71"> </td>
+                          <td value = "72"> </td>
+                          <td value = "73"> </td>
+                          <td value = "74"> </td>
+                          <td value = "75"> </td>
+                        </tr>
+                        <tr>
+                         <th>8교시</th>
+                         <td value = "81"> </td>
+                         <td value = "82"> </td>
+                         <td value = "83"> </td>
+                         <td value = "84"> </td>
+                         <td value = "85"> </td>
+                        </tr>
+                      
+                      </table>
+                </div>
+
+    </div>
+
+    </div>
+    
+   
+    
+</body>
+</html>
