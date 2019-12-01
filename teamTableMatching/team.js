@@ -1,4 +1,7 @@
 $(document).ready(function(){
-    //회원가입 버튼 클릭 시
-  
+    $('#writeNotice').click(function(){
+        var teamID 
+        location.href = "notice.html"
+
+    });
 });

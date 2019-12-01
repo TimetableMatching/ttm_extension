@@ -3,6 +3,7 @@
   "description": "team schedule Matching Program",
   "version": "2.0",
   "permissions": [
+    "storage",
     "activeTab",
     "http://13.209.50.215:5000/*"
   ],
