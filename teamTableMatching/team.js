@@ -20,4 +20,7 @@ $(document).ready(function(){
         location.href = "notice.html"
 
     });
+    $('#goBeforePage').click(function(){
+        window.history.back();
+    });
 });
