@@ -22,7 +22,7 @@ $(document).ready(function(){
         console.log(tmp);
         $.ajax({
             type:"POST",
-            url: "http://13.209.50.215:5000/add_user",
+            url: "http://13.209.43.131:5000/add_user",
             data: tmp,
             contentType  : "application/json",
             cache : false,

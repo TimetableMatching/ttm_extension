@@ -54,9 +54,7 @@
                 width : 80%;
                 padding : 5px;
                 margin : 5px;
-               
-
-          
+                text-align :center;
             }
       
         td,th {
@@ -85,37 +83,23 @@
                     <div id = "dTeamList">
                             <h1 >팀 목록</h1>
                             <button id = "dTeamManage">팀 관리</button>
-                            <table bgcolor = "#cdfdee" cellspacing = "1" >
-                                <tr>
+                            <table bgcolor = "#cdfdee" cellspacing = "1" id = "TeamList">
+                                <tr id = "TeamMenu">
                                     <td>No.</td>
-                                    <td text-align="center">팀 명</td>
-                                    <td text-align="center">인원</td>
-                                    <td text-align="center">팀 ID</td>
-                                </tr>
-                                <!--임시-->
-                                <tr id= "teamEntry">
-                                    <td text-align="center">1</td>
-                                    <td text-align="center">산업체팀</td>
-                                    <td text-align="center">6</td>
-                                    <td text-align="center">20181108-11-06</td>
+                                    <td >팀 명</td>
+                                    <td >인원</td>
+                                    <td >팀 ID</td>
                                 </tr>
                             </table>       
                         </div>
                         <div id = "dNotice">
                             <h1>공지사항</h1>
-                            <table bfcolor = "#cdfdee" cellspacing="1">
-                                <tr>
-                                    <td text-align="center">No.</td>
-                                    <td text-align="center">공지내용</td>
-                                    <td text-align="center">팀 명</td>
-                                    <td text-align="center">날 짜</td>
-                                </tr>
-                                <!--공지내용 8자제한-->
-                                <tr>
-                                    <td text-align="center">1</td>
-                                    <td>오늘까지해올것들</td>
-                                    <td text-align="center">산업체팀</td>
-                                    <td text-align="center">19.11.15</td>
+                            <table bfcolor = "#cdfdee" cellspacing="1" id = "NoticeList">
+                                <tr id = "NoticeMenu">
+                                    <td >No.</td>
+                                    <td >공지내용</td>
+                                    <td >팀 명</td>
+                                    <td >날 짜</td>
                                 </tr>
                             </table> 
                         </div>
@@ -127,16 +111,13 @@
                     <button id="withdrawal">회원탈퇴</button>
                     <table bfcolor = "#cdfdee" cellspacing = "1">
                         <tr>
-                            <td text-align="center">ID</td>
-                            <td text-align="center">danny7742</td>
+                            <td id = "UserId">ID</td>
                         </tr>
                         <tr>
-                            <td text-align="center">소속</td>
-                            <td text-align="center">중앙대학교</td>
+                            <td id = "Organization">소속</td>
                         </tr>
                         <tr>
-                            <td text-align="center">이름</td>
-                            <td text-align="center">강민수</td>
+                            <td id = "UserName">이름</td>
                         </tr>
                     </table>
                 </div>
@@ -157,68 +138,68 @@
                         </tr>
                           <tr>
                           <th>1교시</th>
-                          <td value = "11"> </td>
-                          <td value = "12"> </td>
-                          <td value = "13"></td>
-                          <td value = "14"></td>
-                          <td value = "15"></td>
+                          <td value = "11" id = "11"> </td>
+                          <td value = "12" id = "12"> </td>
+                          <td value = "13" id = "13"></td>
+                          <td value = "14" id = "14"></td>
+                          <td value = "15" id = "15"></td>
                          </tr>
                           <tr>
                           <th>2교시</th>
-                          <td value = "21"> </td>
-                          <td value = "22"> </td>
-                          <td value = "23"> </td>
-                          <td value = "24"> </td>
-                          <td value = "25"> </td>
+                          <td value = "21" id = "21"> </td>
+                          <td value = "22" id = "22"> </td>
+                          <td value = "23" id = "23"> </td>
+                          <td value = "24" id = "24"> </td>
+                          <td value = "25" id = "25"> </td>
                           
                         </tr>
                           <tr>
                           <th>3교시</th>
-                          <td value = "31"> </td>
-                          <td value = "32"> </td>
-                          <td value = "33"></td>
-                          <td value = "34"></td>
-                          <td value = "35"> </td>
+                          <td value = "31" id = "31"> </td>
+                          <td value = "32" id = "32"> </td>
+                          <td value = "33" id = "33"></td>
+                          <td value = "34" id = "34"></td>
+                          <td value = "35" id = "35"> </td>
                         </tr>
                          <tr>
                           <th>4교시</th>
-                          <td value = "41"> </td>
-                          <td value = "42"> </td>
-                          <td value = "43"> </td>
-                          <td value = "44"> </td>
-                          <td value = "45"> </td>
+                          <td value = "41" id = "41"> </td>
+                          <td value = "42" id = "42"> </td>
+                          <td value = "43" id = "43"> </td>
+                          <td value = "44" id = "44"> </td>
+                          <td value = "45" id = "45"> </td>
                         </tr>
                          <tr>
                           <th>5교시</th>
-                          <td value = "51"> </td>
-                          <td value = "52"> </td>
-                          <td value = "53"> </td>
-                          <td value = "54"> </td>
-                          <td value = "55"> </td>
+                          <td value = "51" id = "51"> </td>
+                          <td value = "52" id = "52"> </td>
+                          <td value = "53" id = "53"> </td>
+                          <td value = "54" id = "54"> </td>
+                          <td value = "55" id = "55"> </td>
                         </tr>
                          <tr>
                           <th>6교시</th>
-                          <td value = "61"> </td>
-                          <td value = "62"> </td>
-                          <td value = "63"> </td>
-                          <td value = "64"> </td>
-                          <td value = "65"> </td>
+                          <td value = "61" id = "61"> </td>
+                          <td value = "62" id = "62"> </td>
+                          <td value = "63" id = "63"> </td>
+                          <td value = "64" id = "64"> </td>
+                          <td value = "65" id = "65"> </td>
                         </tr>
                          <tr>
                           <th>7교시</th>
-                          <td value = "71"> </td>
-                          <td value = "72"> </td>
-                          <td value = "73"> </td>
-                          <td value = "74"> </td>
-                          <td value = "75"> </td>
+                          <td value = "71" id = "71"> </td>
+                          <td value = "72" id = "72"> </td>
+                          <td value = "73" id = "73"> </td>
+                          <td value = "74" id = "74"> </td>
+                          <td value = "75" id = "75"> </td>
                         </tr>
                         <tr>
                          <th>8교시</th>
-                         <td value = "81"> </td>
-                         <td value = "82"> </td>
-                         <td value = "83"> </td>
-                         <td value = "84"> </td>
-                         <td value = "85"> </td>
+                         <td value = "81" id = "81"> </td>
+                         <td value = "82" id = "82"> </td>
+                         <td value = "83" id = "83"> </td>
+                         <td value = "84" id = "84"> </td>
+                         <td value = "85" id = "85"> </td>
                         </tr>
                       
                       </table>
