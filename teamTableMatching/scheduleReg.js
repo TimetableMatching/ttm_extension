@@ -15,29 +15,27 @@ $(document).ready(function(){
         for(var i= 0; i <scheduleEntry.length ; i++){
             if( scheduleEntry[i].style.backgroundColor == "rgb(102, 102, 153)" ){
                 scheduleArray.push($(scheduleEntry[i]).attr("value"));
-                
             }
         }
-        
         var allData = {"email": userInfo.Id, "password":userInfo.Password, "name" : userInfo.Name, "organization":userInfo.Organization, "schedule" : scheduleArray };
         var tmp = JSON.stringify(allData);
         console.log(tmp);
-        // $.ajax({
-        //     type:"POST",
-        //     url: "http://13.209.50.215:5000/add_user",
-        //     data: tmp,
-        //     contentType  : "application/json",
-        //     cache : false,
-        //     processData: false,
-        //     success: function (data) {
-        //         console.log(data);
-        //         location.href="login.html";
-        //         alert("회원가입이 완료되었습니다.");
-        //     },error:function(data){
-        //         alert("error");
-        //         console.log(data);
-        //     }
-        // }); 
+        $.ajax({
+            type:"POST",
+            url: "http://13.209.43.131:5000/add_user",
+            data: tmp,
+            contentType  : "application/json",
+            cache : false,
+            processData: false,
+            success: function (data) {
+                console.log(data);
+                location.href="login.html";
+                alert("회원가입이 완료되었습니다.");
+            },error:function(data){
+                alert("error");
+                console.log(data);
+            }
+        }); 
     });
     function getUrlParams() {
         var params = {};
