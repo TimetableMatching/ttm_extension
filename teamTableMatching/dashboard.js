@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var userId = localStorage.getItem('email');
+    var userId = localStorage.getItem('myEmail');
     var userPassword = localStorage.getItem('password');
     localStorage.removeItem('password');
     var allData = { email : userId , password : userPassword };
@@ -50,9 +50,6 @@ $(document).ready(function(){
             location.href = "team.html"
         }
     });
-    $('.teamEntry').click(function(){
-        console.log(this);
-    })
     function addTeamListEntry(team){
         for(var i = 0; i < team.length ;i++){
             $('#TeamList').append(' <tr class= "teamEntry"><td >'+i+'</td><td >'+team[i].Team_Name+'</a></td><td >'+team[i].MemberNum+'</td><td >'+team[i].Team_ID+'</td></tr>') 
