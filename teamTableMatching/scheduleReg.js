@@ -1,6 +1,7 @@
 $(document).ready(function(){
     var scheduleArray = [];
     var userInfo =  getUrlParams();
+    console.log(userInfo);
 
 
     $('td').click(function () {
@@ -17,14 +18,13 @@ $(document).ready(function(){
                 scheduleArray.push($(scheduleEntry[i]).attr("value"));
             }
         }
-        var allData = {"email": userInfo.Id, "password":userInfo.Password, "name" : userInfo.Name, "organization":userInfo.Organization, "schedule" : scheduleArray };
+        var allData = {"email": userInfo.Id, "password":userInfo.Password, "name" : decodeURIComponent(userInfo.Name,"UTF-8"), "organization": decodeURIComponent(userInfo.Organization,"UTF-8"), "schedule" : scheduleArray };
         var tmp = JSON.stringify(allData);
-        console.log(tmp);
         $.ajax({
             type:"POST",
             url: "http://13.209.43.131:5000/add_user",
             data: tmp,
-            contentType  : "application/json",
+            contentType  : "application/json; charset=utf-8",
             cache : false,
             processData: false,
             success: function (data) {
@@ -42,12 +42,4 @@ $(document).ready(function(){
         window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });
         return params;
     }
-    function selectSchedule(item,idex){
-        
-        if( this.style.backgroundColor == "rgb(102, 102, 153)" ){
-            scheduleArray.push(item.attr("value"));
-        }
-        
-    }
-
 });
