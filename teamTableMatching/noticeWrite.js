@@ -31,5 +31,7 @@ $(document).ready(function(){
         $('#TeamId').after('<td>'+localStorage.getItem('teamId')+'</td>');
         $('#TeamName').after('<td >'+localStorage.getItem('teamName')+'</td>');
     }
-    
+    $('#GoBackBtn').click(function(){
+        window.history.back();
+    });
 });
