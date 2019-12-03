@@ -1,17 +1,16 @@
 $(document).ready(function(){
 
+    addTeamEntry();
     $('#noticeReg').click(function(){
         var notice = $('#notice').val();
-        var teamId = "핸즈온";
-        var allData = { 'notice' : notice , 'teamId' : teamId};
+        var teamId = localStorage.getItem('teamId');
+        var author = localStorage.getItem('myName');
+        var allData = { 'notice' : notice , 'team_id' : teamId , 'author' : author};
         
-        var temp = JSON.stringify(allData);
-       
-        //location.href="login.html?";
-
+        var tmp = JSON.stringify(allData);
         $.ajax({
             type:"POST",
-            url: "http://13.209.50.215:5000/----",
+            url: "http://13.209.43.131:5000/add_notice",
             data: tmp,
             contentType  : "application/json",
             cache : false,
@@ -19,22 +18,18 @@ $(document).ready(function(){
             success: function (data) {
                 console.log(data);
                 if(data.status == "1"){
-                    chrome.storage.sync.set({'teamData': data},function(){
-                        alert('Success!');
-                    });
-                    location.href="team.html";
-
-                }else{
-                    alert("로그인에 실패하셨습니다.");
+                    alert("공지사항이 등록되셨습니다.");
+                    location.href = "team.html";
                 }
-               
             },error:function(data){
                 alert("error");
                 console.log(data);
             }
-        }); 
-        location.href="login.html?notice=b";
-      
-
+        });     
     })
+    function addTeamEntry(){
+        $('#TeamId').after('<td>'+localStorage.getItem('teamId')+'</td>');
+        $('#TeamName').after('<td >'+localStorage.getItem('teamName')+'</td>');
+    }
+    
 });

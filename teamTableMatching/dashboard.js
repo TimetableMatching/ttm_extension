@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    var userId = localStorage.getItem('email');
+    var userId = localStorage.getItem('myEmail');
     var userPassword = localStorage.getItem('password');
-    localStorage.removeItem('password');
+    //localStorage.removeItem('password');
     var allData = { email : userId , password : userPassword };
     var tmp = JSON.stringify(allData);
     $.ajax({
@@ -27,6 +27,7 @@ $(document).ready(function(){
                 UpdateSchedule(schedule);       
             }else{
                 alert("로그인에 실패하셨습니다.");
+                location.href = "login.html";
             }
         },error:function(data){
             alert("error");
@@ -47,12 +48,10 @@ $(document).ready(function(){
         if(tr[0].getAttribute("class") == 'teamEntry'){
             console.log(tr[0].children[3].innerText);
             localStorage.setItem('teamId',tr[0].children[3].innerText);
+            localStorage.setItem('teamName',tr[0].children[1].innerText);
             location.href = "team.html"
         }
     });
-    $('.teamEntry').click(function(){
-        console.log(this);
-    })
     function addTeamListEntry(team){
         for(var i = 0; i < team.length ;i++){
             $('#TeamList').append(' <tr class= "teamEntry"><td >'+i+'</td><td >'+team[i].Team_Name+'</a></td><td >'+team[i].MemberNum+'</td><td >'+team[i].Team_ID+'</td></tr>') 
@@ -73,9 +72,11 @@ $(document).ready(function(){
         $('#UserId').after('<td>'+user.Email+'</td>');
         $('#Organization').after('<td >'+user.Organization+'</td>');
         $('#UserName').after('<td >'+user.Name+'</td>');
+        //user인포 저장
+        localStorage.setItem('myName',user.Name );
     }
     function UpdateSchedule(schedule){
-        localStorage.setItem("Myschedule",schedule);
+        localStorage.setItem("myschedule",schedule);
         for(var i = 0 ; i <schedule.length ; i++){
             $('#'+ schedule[i]).css("background-color","rgb(102, 102, 153)" );
         }

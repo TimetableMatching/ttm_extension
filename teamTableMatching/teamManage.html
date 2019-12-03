@@ -1,1 +1,53 @@
-<html>This is Team Manage HTML</html>
+<html lang="UTF-8">
+<head>
+    <title>Document</title>
+    <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="teamManage.js"></script>
+    <style type="text/css">
+        #teamManage{
+            text-align: center;
+            margin-left: auto; 
+            margin-right: auto;
+        }
+        #main {
+            display : flex;
+            height: 550px;
+            width: 700px;
+            margin:auto;
+        }
+      
+
+        button {
+            margin : 5px;
+        }
+
+        select{
+            width: 100px;
+            padding: .5em;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+       <header>
+           Team Management
+       </header>
+    </div>
+    <div id = "main">  
+        <div id = "teamManage">
+            <h1 >팀 관리</h1>
+            <button id = "goBeforePage">뒤로가기</button><br>  
+            팀 선택
+            <select id = "steamSelect">
+                <!--한글 아래부분 잘리는 문제. css추후 설정-->
+            </select>
+            <input type="button" id = "teamEnroll" value="팀 등록"/>
+            <input type="button" id = "teamDelete" value="팀 삭제"/>
+            </form>
+        </div>
+
+    </div> 
+</body>
+</html>
