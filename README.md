@@ -1,4 +1,5 @@
-ttm_extension
+# TimeTableMatching Extension
+팀플, 그룹들의 시간표를 가지고 팀원들과 서로 공강시간을 조회할 수 있는, extension입니다.
 
 
 Install
@@ -9,4 +10,7 @@ Install
 4. '압축해제된 확장 프로그램을 로드합니다.' 를 클릭하고, teamTableMatching디렉토리를 선택하세요.
 
 
-![startExtension](./resource/startExtension.mp4)
+업로드 하는 영상
+ - /resource/upload.mp4
+extension 실행영상
+ - /resource/startExtension.mp4
