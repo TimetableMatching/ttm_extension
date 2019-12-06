@@ -18,7 +18,7 @@ $(document).ready(function(){
                 scheduleArray.push($(scheduleEntry[i]).attr("value"));
             }
         }
-        var allData = {"email": userInfo.Id, "password":userInfo.Password, "name" : decodeURIComponent(userInfo.Name,"UTF-8"), "organization": decodeURIComponent(userInfo.Organization,"UTF-8"), "schedule" : scheduleArray };
+        var allData = {"email":  decodeURIComponent(userInfo.Id,"UTF-8"), "password":userInfo.Password, "name" : decodeURIComponent(userInfo.Name,"UTF-8"), "organization": decodeURIComponent(userInfo.Organization,"UTF-8"), "schedule" : scheduleArray };
         var tmp = JSON.stringify(allData);
         $.ajax({
             type:"POST",
