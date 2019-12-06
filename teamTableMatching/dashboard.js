@@ -35,9 +35,28 @@ $(document).ready(function(){
     }); 
 
     $('#withdrawal').click(function(){
-        alert("회원 탈퇴 되셨습니다.");
-        location.href="login.html";
-        
+        var email = localStorage.getItem("myEmail");
+        var allData = { email : email};
+        var tmp = JSON.stringify(allData);
+        console.log(tmp);
+        $.ajax({
+            type:"POST",
+            url: "http://13.209.43.131:5000/withdrawl",
+            data: tmp,
+            contentType  : "application/json",
+            cache : false,
+            processData: false,
+            success: function (data) {
+                console.log(data);
+                if(data.status == "1"){
+                }else{
+                    alert("회원 탈퇴에 실패하셨습니다.");
+                    
+                }
+            },error:function(data){
+                alert("error");
+            }
+        });
     });
 
     $('#dTeamManage').click(function(){
@@ -68,6 +87,9 @@ $(document).ready(function(){
             $('#NoticeList').append(' <tr class= "NoticeEntry"><td >'+i+'</td><td >'+notice[i].Text+'</td><td >'+teamName+'</td><td >'+notice[i].Date+'</td></tr>') 
         }
     }
+    $('#dUpdateSchedule').click(function(){
+        location.href = "scheduleChange.html"
+    });
     function addUserEntry(user){
         $('#UserId').after('<td>'+user.Email+'</td>');
         $('#Organization').after('<td >'+user.Organization+'</td>');

@@ -34,4 +34,5 @@ $(document).ready(function(){
     $('#GoBackBtn').click(function(){
         window.history.back();
     });
+    
 });
