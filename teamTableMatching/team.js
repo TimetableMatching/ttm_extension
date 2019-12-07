@@ -31,12 +31,15 @@ $(document).ready(function(){
     });
     function addMemberEntry(memberList){
         for(var i = 0 ; i<memberList.length ; i++){
-          $('#MemberList').append('<tr class = "MemberEntry"><td >'+ i +'</td><td >'+ memberList[i].Email +'</td><td >'+memberList[i].Name+'</td><td >'+memberList[i].Organization+'</td><td><input type="checkbox"><br></td></tr>');
+          $('#MemberList').append('<tr class = "MemberEntry"><td >'+ i +'</td><td >'+ memberList[i].Email +'</td><td >'+memberList[i].Name+'</td><td >'+memberList[i].Organization+'</td><td><input type="checkbox" id = "'+memberList[i].Email +'"><br></td></tr>');
         }
     }
     function addNoticeListEntry(notice){
         for(var i = 0; i < notice.length ;i++){
             $('#NoticeList').append(' <tr class= "NoticeEntry" value ="'+notice[i].notice_id+'"><td >'+i+'</td><td >'+notice[i].Text+'</td><td >'+notice[i].author+'</td><td >'+notice[i].Date+'</td></tr>') 
+        }
+        for(var j = 0; j < teamId.length ; j++){
+            console.log("teamId");
         }
     }
     function addTeamEntry(teamId,teamName){
@@ -61,6 +64,7 @@ $(document).ready(function(){
         for(var i = 0 ; i < memberList.length ; i++){
             var member = memberList[i];
             var checkbox =  document.getElementById(memberList[i].Email);
+            console.log(checkbox);
             if(checkbox.checked == true){
                 for(var j = 0 ; j < member.Schedule.length; j++){
                     if($('#'+ member.Schedule[j]).css("background-color") == "rgba(0, 0, 0, 0)"){
@@ -77,7 +81,6 @@ $(document).ready(function(){
     $('#goBeforePage').click(function(){
         location.href = "dashboard.html";
     });
-
     $(document).on("click", ".NoticeEntry", function () {
         var notice = this.children[1].innerText
         var userName = localStorage.getItem("myName");
