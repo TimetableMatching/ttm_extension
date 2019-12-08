@@ -5,7 +5,7 @@ $(document).ready(function(){
     var allData = { "team_id" : teamId };
     var tmp = JSON.stringify(allData);
     var memberList;
-
+    console.log(tmp);
     $.ajax({
         type:"POST",
         url: "http://13.209.43.131:5000/read_team",
@@ -14,6 +14,7 @@ $(document).ready(function(){
         cache : false,
         processData: false,
         success: function (data) {
+            console.log(data); 
             memberList = data.Member;
             var teamId = data.Team_ID;
             var teamName = data.Team_Name
@@ -44,7 +45,7 @@ $(document).ready(function(){
     }
     function addTeamEntry(teamId,teamName){
         $('#TeamId').after('<td>'+teamId+'</td>');
-        $('#TeamName').after('<td >'+teamName+'</td>');
+        $('#TeamName').after('<td >'+ localStorage.getItem('tameName')+'</td>');
     }
     function searchTeamSchedule(memberList){
         for(var i = 0 ; i < memberList.length ; i++){
