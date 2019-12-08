@@ -4,6 +4,68 @@
     <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <script src="jquery-3.4.1.min.js"></script>
     <script src="signUpScript.js"></script>
+
+    <style>
+        #size {
+            height: 550px;
+            width: 700px;
+        }
+        #SignUpSubmit,
+        #GoBackBtn,
+        #SignUpSubmit::after,
+        #GoBackBtn::after{
+        -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+            transition: all 0.3s;
+        
+        }
+
+        #SignUpSubmit,
+        #GoBackBtn{
+        background: none;
+        border: 2px solid #777777;
+        border-radius: 5px;
+        color: #777777;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0.3em auto;
+        padding: 0.2em 0.6em;
+        position: relative;
+        text-transform: uppercase;
+        }
+        
+        #SignUpSubmit::before,
+        #GoBackBtn::before,
+        #SignUpSubmit::after,
+        #GoBackBtn::after{
+        background: #DDDDDD;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        }
+
+        #SignUpSubmit:hover,
+        #GoBackBtn:hover {
+        color: #AAAAAA;
+        font-family: 'Hanna', sans-serif;
+        }
+
+
+        .btn-3::after {
+        height: 0;
+        left: 50%;
+        top: 50%;
+        width: 0;
+        }
+
+        .btn-3:hover:after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+        }
+    </style>
 </head>
 <body>
     <div>
@@ -11,7 +73,7 @@
            Team Schedule Matching System
        </header>
     </div>
-    <div>
+    <div id = "size"> 
         <h1>회원가입</h1>
         <table bgcolor = "#cdfdee" cellspacing = "1" >
             <form action="scheduleReg.html" accept-charset="utf-8" id="signup_info" method="GET">
@@ -42,8 +104,8 @@
             
         </table>       
         
-        <input type = "submit" id = "SignUpSubmit" value = "다음">
-        <input type = "button" id = "GoBackBtn" value="뒤로가기">
+        <input type = "submit" id = "SignUpSubmit" value = "다음" class="btn-3">
+        <input type = "button" id = "GoBackBtn" value="뒤로가기" class="btn-3">
             
     </form>
     </div>
