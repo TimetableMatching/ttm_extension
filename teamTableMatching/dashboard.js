@@ -73,7 +73,7 @@ $(document).ready(function(){
     });
     function addTeamListEntry(team){
         for(var i = 0; i < team.length ;i++){
-            $('#TeamList').append(' <tr class= "teamEntry"><td >'+i+'</td><td >'+team[i].Team_Name+'</a></td><td >'+team[i].MemberNum+'</td><td >'+team[i].Team_ID+'</td></tr>') 
+            $('#TeamList').append(' <tr class= "teamEntry"><td >'+(i+1)+'</td><td >'+team[i].Team_Name+'</a></td><td >'+team[i].MemberNum+'</td><td >'+team[i].Team_ID+'</td></tr>') 
         }
     }
     function addNoticeListEntry(notice,team){
@@ -84,7 +84,7 @@ $(document).ready(function(){
                     teamName = team[j].Team_Name;
                 }
             }
-            $('#NoticeList').append(' <tr class= "NoticeEntry"><td >'+i+'</td><td >'+notice[i].Text+'</td><td >'+teamName+'</td><td >'+notice[i].Date+'</td></tr>') 
+            $('#NoticeList').append(' <tr class= "NoticeEntry"><td >'+(i+1)+'</td><td >'+notice[i].Text+'</td><td >'+teamName+'</td><td >'+notice[i].Date+'</td></tr>') 
         }
     }
     $('#dUpdateSchedule').click(function(){

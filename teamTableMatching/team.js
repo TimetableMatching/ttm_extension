@@ -32,12 +32,12 @@ $(document).ready(function(){
     });
     function addMemberEntry(memberList){
         for(var i = 0 ; i<memberList.length ; i++){
-          $('#MemberList').append('<tr class = "MemberEntry"><td >'+ i +'</td><td >'+ memberList[i].Email +'</td><td >'+memberList[i].Name+'</td><td >'+memberList[i].Organization+'</td><td><input type="checkbox" id = "'+memberList[i].Email +'"><br></td></tr>');
+          $('#MemberList').append('<tr class = "MemberEntry"><td >'+ (i+1) +'</td><td >'+ memberList[i].Email +'</td><td >'+memberList[i].Name+'</td><td >'+memberList[i].Organization+'</td><td><input type="checkbox" id = "'+memberList[i].Email +'"><br></td></tr>');
         }
     }
     function addNoticeListEntry(notice){
         for(var i = 0; i < notice.length ;i++){
-            $('#NoticeList').append(' <tr class= "NoticeEntry" value ="'+notice[i].notice_id+'"><td >'+i+'</td><td >'+notice[i].Text+'</td><td >'+notice[i].author+'</td><td >'+notice[i].Date+'</td></tr>') 
+            $('#NoticeList').append(' <tr class= "NoticeEntry" value ="'+notice[i].notice_id+'"><td >'+(i+1)+'</td><td >'+notice[i].Text+'</td><td >'+notice[i].author+'</td><td >'+notice[i].Date+'</td></tr>') 
         }
         for(var j = 0; j < teamId.length ; j++){
             console.log("teamId");

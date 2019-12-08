@@ -6,20 +6,17 @@
     <script src="team.js"></script>
     <style type="text/css">
          #teamMemberList{
-            border : 1px solid black;
             flex-grow: 1;
         }
         #dTeamInfo{
-            border : 1px solid black;
+            padding-top:69px;
             flex-grow: 1;
         }
         #dNotice{
-            border : 1px solid black;
             flex-grow: 1;    
         }
         #dSchedule{
             text-align: center;
-            border : 1px solid black;;
             flex-grow: 1;
             
         }
@@ -129,7 +126,12 @@
         width: 100%;
         }
         
-
+        #noticeList{
+            font-size:95%;
+            width:100%;
+        }
+        
+        tr.NoticeEntry:hover { background-color: #DDDDDD; }
     </style>
 </head>
 <body>
@@ -146,11 +148,11 @@
                             <button id = "aginReadschedule">공강 다시 조회</button>
                             <table cellspacing = "1" id = "MemberList">
                                 <tr bgcolor = "#cdfdee" id = "MemberMenu">
-                                    <td >No.</td>
-                                    <td >ID</td>
-                                    <td >이름</td>
-                                    <td >소속</td>
-                                    <td >선택</td>
+                                    <th >No.</th>
+                                    <th >ID</th>
+                                    <th >이름</th>
+                                    <th >소속</th>
+                                    <th >선택</th>
                                 </tr>
                             </table>       
                         </div>
@@ -159,10 +161,10 @@
                             <button id = "writeNotice">공지사항 작성</button>
                             <table bfcolor = "#cdfdee" cellspacing="1" id = "NoticeList">
                                 <tr>
-                                    <td bgcolor = "#cdfdee">No.</td>
-                                    <td bgcolor = "#cdfdee" >공지내용</td>
-                                    <td bgcolor = "#cdfdee" >이름</td>
-                                    <td bgcolor = "#cdfdee" >날 짜</td>
+                                    <th bgcolor = "#cdfdee">No.</th>
+                                    <th bgcolor = "#cdfdee" >공지내용</th>
+                                    <th bgcolor = "#cdfdee" >이름</th>
+                                    <th bgcolor = "#cdfdee" >날 짜</th>
                                     <td style=" border : 1px solid white" ></td>
                                 </tr>
                             </table> 
@@ -188,11 +190,11 @@
                     <table >
                         <tr >
                           <th> </th>
-                          <th bgcolor = "#cdfdee">월</th>
-                          <th bgcolor = "#cdfdee">화</th>
-                          <th bgcolor = "#cdfdee">수</th>
-                          <th bgcolor = "#cdfdee">목</th>
-                          <th bgcolor = "#cdfdee">금</th>
+                          <th >월</th>
+                          <th >화</th>
+                          <th >수</th>
+                          <th >목</th>
+                          <th >금</th>
                         </tr>
                         </tr>
                         <tr>
