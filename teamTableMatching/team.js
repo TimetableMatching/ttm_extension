@@ -44,8 +44,9 @@ $(document).ready(function(){
         }
     }
     function addTeamEntry(teamId,teamName){
+        var team = localStorage.getItem('teamName');
         $('#TeamId').after('<td>'+teamId+'</td>');
-        $('#TeamName').after('<td >'+ localStorage.getItem('tameName')+'</td>');
+        $('#TeamName').after('<td >'+ team+'</td>');
     }
     function searchTeamSchedule(memberList){
         for(var i = 0 ; i < memberList.length ; i++){
