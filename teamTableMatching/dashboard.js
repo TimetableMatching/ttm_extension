@@ -27,7 +27,7 @@ $(document).ready(function(){
                 UpdateSchedule(schedule);       
             }else{
                 alert("로그인에 실패하셨습니다.");
-                //location.href = "login.html";
+                location.href = "login.html";
             }
         },error:function(data){
             alert("error");
