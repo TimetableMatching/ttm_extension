@@ -6,9 +6,69 @@
     <script src="loginScript.js"></script>
     <style>
         #size {
-            height:  2000px;
-            width: 5000px;
+            height: 550px;
+            width: 700px;
 
+        }
+        button,
+        button::after {
+        -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+            transition: all 0.3s;
+        
+        }
+
+        button {
+        background: none;
+        border: 2px solid #777777;
+        border-radius: 5px;
+        color: #777777;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0.3em auto;
+        padding: 0.2em 0.6em;
+        position: relative;
+        text-transform: uppercase;
+        }
+        #SignInSubmit{
+            background: none;
+        border: 2px solid #777777;
+        border-radius: 5px;
+        color: #777777;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0.3em auto;
+        padding: 0.2em 0.6em;
+        position: relative;
+        text-transform: uppercase;
+        }
+        
+
+
+        button:hover {
+        color: #AAAAAA;
+        font-family: 'Hanna', sans-serif;
+        }
+        
+        
+        #SignInSubmit:hover{
+        color: #AAAAAA;
+        font-family: 'Hanna', sans-serif;
+        }
+
+        .btn-3::after {
+        height: 0;
+        left: 50%;
+        top: 50%;
+        width: 0;
+        }
+
+        .btn-3:hover:after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
         }
     </style>
 </head>
@@ -39,8 +99,8 @@
             </form>
         </table>       
            
-           <input type = "submit" id = "SignInSubmit" value = "로그인"/>
-            <a href="signUp.html"><button>회원가입</button></a>
+           <input type = "submit" id = "SignInSubmit" value = "로그인" class="btn-3"/>
+            <a href="signUp.html"><button class="btn-3">회원가입</button></a>
     </div>
 </body>
 </html>

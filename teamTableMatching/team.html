@@ -61,12 +61,74 @@
                 text-align: center;
                 padding: 3px;
             }
-        button {
-            margin : 5px;
-        }
+        
         h1 {
             display: inline;
         }
+        
+        button,
+        button::after {
+        -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+            transition: all 0.3s;
+        
+        }
+
+        button {
+        background: none;
+        border: 2px solid #777777;
+        border-radius: 5px;
+        color: #777777;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0.3em auto;
+        padding: 0.2em 0.6em;
+        position: relative;
+        text-transform: uppercase;
+        }
+        #goBeforePage,
+        #aginReadschedule{
+            background: none;
+        border: 2px solid #777777;
+        border-radius: 5px;
+        color: #777777;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0.3em auto;
+        padding: 0.2em 0.6em;
+        position: relative;
+        text-transform: uppercase;
+        }
+        
+
+
+        button:hover {
+        color: #AAAAAA;
+        font-family: 'Hanna', sans-serif;
+        }
+        
+        
+        #goBeforePage:hover,
+        #aginReadschedule:hover{
+        color: #AAAAAA;
+        font-family: 'Hanna', sans-serif;
+        }
+
+        .btn-3::after {
+        height: 0;
+        left: 50%;
+        top: 50%;
+        width: 0;
+        }
+
+        .btn-3:hover:after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+        }
+        
 
     </style>
 </head>
@@ -82,8 +144,8 @@
                             <button id = "goBeforePage">뒤로가기</button><br>
                             <h1>팀 원</h1>
                             <button id = "aginReadschedule">공강 다시 조회</button>
-                            <table bgcolor = "#cdfdee" cellspacing = "1" id = "MemberList">
-                                <tr id = "MemberMenu">
+                            <table cellspacing = "1" id = "MemberList">
+                                <tr bgcolor = "#cdfdee" id = "MemberMenu">
                                     <td >No.</td>
                                     <td >ID</td>
                                     <td >이름</td>
@@ -97,10 +159,10 @@
                             <button id = "writeNotice">공지사항 작성</button>
                             <table bfcolor = "#cdfdee" cellspacing="1" id = "NoticeList">
                                 <tr>
-                                    <td >No.</td>
-                                    <td >공지내용</td>
-                                    <td >이름</td>
-                                    <td >날 짜</td>
+                                    <td bgcolor = "#cdfdee">No.</td>
+                                    <td bgcolor = "#cdfdee" >공지내용</td>
+                                    <td bgcolor = "#cdfdee" >이름</td>
+                                    <td bgcolor = "#cdfdee" >날 짜</td>
                                     <td style=" border : 1px solid white" ></td>
                                 </tr>
                             </table> 
@@ -124,13 +186,13 @@
                 <div id = dSchedule>
                     <h1>공강 시간표</h1>
                     <table >
-                        <tr>
+                        <tr >
                           <th> </th>
-                          <th>월</th>
-                          <th>화</th>
-                          <th>수</th>
-                          <th>목</th>
-                          <th>금</th>
+                          <th bgcolor = "#cdfdee">월</th>
+                          <th bgcolor = "#cdfdee">화</th>
+                          <th bgcolor = "#cdfdee">수</th>
+                          <th bgcolor = "#cdfdee">목</th>
+                          <th bgcolor = "#cdfdee">금</th>
                         </tr>
                         </tr>
                         <tr>

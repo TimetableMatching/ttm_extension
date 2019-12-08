@@ -34,12 +34,77 @@
                 text-align: center;
                 padding: 3px;
             }
-        button {
-            margin : 5px;
-        }
         h1 {
             margin:0 auto;
             display:inline;
+        }
+
+        button,
+        button::after {
+        -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+            transition: all 0.3s;
+        
+        }
+
+        button {
+        background: none;
+        border: 2px solid #777777;
+        border-radius: 5px;
+        color: #777777;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0.3em auto;
+        padding: 0.2em 0.6em;
+        position: relative;
+        text-transform: uppercase;
+        }
+        #enrollTeam,
+        #searchMember,
+        #addMember{
+            background: none;
+        border: 2px solid #777777;
+        border-radius: 5px;
+        color: #777777;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0.3em auto;
+        padding: 0.2em 0.6em;
+        position: relative;
+        text-transform: uppercase;
+        }
+        #teamId{
+            margin-left:12px;
+            margin-bottom:15px;
+        }
+
+
+        button:hover {
+        color: #AAAAAA;
+        font-family: 'Hanna', sans-serif;
+        }
+        
+        
+        #enrollTeam:hover,
+        #searchMember:hover,
+        #addMember:hover{
+        color: #AAAAAA;
+        font-family: 'Hanna', sans-serif;
+        }
+
+        .btn-3::after {
+        height: 0;
+        left: 50%;
+        top: 50%;
+        width: 0;
+        }
+
+        .btn-3:hover:after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
         }
 
     </style>
@@ -62,8 +127,8 @@
                     <input type="button" id="searchMember" value="조회하기">
                     <input type="button" id="addMember" value="추가하기">
 
-                    <table bgcolor = "#cdfdee" cellspacing = "1" id = "newTeamTable">
-                        <tr>
+                    <table  cellspacing = "1" id = "newTeamTable">
+                        <tr bgcolor = "#cdfdee">
                             <td>No.</td>
                             <td text-align="center">ID</td>
                             <td text-align="center">이름</td>
