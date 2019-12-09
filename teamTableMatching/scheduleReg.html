@@ -1,143 +1,157 @@
 <html lang="UTF-8">
 <head>
-    <title>Document</title>
-    <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
-    <script src="jquery-3.4.1.min.js"></script>
-    <script src="scheduleReg.js"></script>
-     <style>
-       
-            table {
-                border: 1px solid black;
-                border-collapse: collapse;
-                text-align: center;
-                width : 500px;
-                height: 40px;
-               
-            }
-            td,th {
-                border: 1px solid black;
-                border-collapse: collapse;
-                text-align: center;
-                padding: 5px;
-            }
-        #SignUpComplete{
-            background: none;
-        border: 2px solid #777777;
-        border-radius: 5px;
-        color: #777777;
-        font-size: 1em;
-        font-weight: bold;
-        margin: 0.3em auto;
-        padding: 0.2em 0.6em;
-        position: relative;
-        text-transform: uppercase;
-        }
-        
-
-
-        
-        #SignUpComplete:hover{
-        color: #AAAAAA;
-        font-family: 'Hanna', sans-serif;
-        }
-
-        .btn-3::after {
-        height: 0;
-        left: 50%;
-        top: 50%;
-        width: 0;
-        }
-
-        .btn-3:hover:after {
-        height: 100%;
-        left: 0;
-        top: 0;
-        width: 100%;
-        }
-            
-        </style>
+  <title>Document</title>
+  <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link rel = "stylesheet" href = "css/bootstrap.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Raleway&display=swap" rel="stylesheet">
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src = "js/bootstrap.js"></script>
+  <script src="scheduleReg.js"></script>
+  <style>
+    body {
+        font-family: 'Raleway', sans-serif;
+        font-family: 'Noto Sans KR', sans-serif;
+        text-align: "center";
+    }
+    #container {
+      height: 500px;
+      width: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      top : 10%;
+    }
+   table {
+     border: 1px solid black;
+     border-collapse: collapse;
+     text-align: center;
+     width : 500px;
+     height: 40px;  
+   }
+   td,th {
+       border: 1px solid black;
+       border-collapse: collapse;
+       text-align: center;
+       padding: 5px;
+   }
+    #SignUpComplete{
+      background: none;
+      border: 2px solid #777777;
+      border-radius: 5px;
+      color: #777777;
+      font-size: 1em;
+      font-weight: bold;
+      margin: 0.3em auto;
+      padding: 0.2em 0.6em;
+      position: relative;
+      text-transform: uppercase;
+    }
+    
+    #SignUpComplete:hover{
+      color: #AAAAAA;
+      font-family: 'Hanna', sans-serif;
+    }
+    .btn-3::after {
+      height: 0;
+      left: 50%;
+      top: 50%;
+      width: 0;
+    }
+    .btn-3:hover:after {
+      height: 100%;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+    td:hover {
+      background-color: #AAAAAA;
+    }  
+    </style>
 </head>
 <body>
-        <h1 ">시간표 등록</h1>
-       
-       <table >
-       
-       
-         <tr>
-           <th> </th>
-           <th>월</th>
-           <th>화</th>
-           <th>수</th>
-           <th>목</th>
-           <th>금</th>
-         </tr>
-           <tr>
-           <th>1교시</th>
-           <td value = "11"> </td>
-           <td value = "12"> </td>
-           <td value = "13"></td>
-           <td value = "14"></td>
-           <td value = "15"></td>
-          </tr>
-           <tr>
-           <th>2교시</th>
-           <td value = "21"> </td>
-           <td value = "22"> </td>
-           <td value = "23"> </td>
-           <td value = "24"> </td>
-           <td value = "25"> </td>
-           
-         </tr>
-           <tr>
-           <th>3교시</th>
-           <td value = "31"> </td>
-           <td value = "32"> </td>
-           <td value = "33"></td>
-           <td value = "34"></td>
-           <td value = "35"> </td>
-         </tr>
-          <tr>
-           <th>4교시</th>
-           <td value = "41"> </td>
-           <td value = "42"> </td>
-           <td value = "43"> </td>
-           <td value = "44"> </td>
-           <td value = "45"> </td>
-         </tr>
-          <tr>
-           <th>5교시</th>
-           <td value = "51"> </td>
-           <td value = "52"> </td>
-           <td value = "53"> </td>
-           <td value = "54"> </td>
-           <td value = "55"> </td>
-         </tr>
-          <tr>
-           <th>6교시</th>
-           <td value = "61"> </td>
-           <td value = "62"> </td>
-           <td value = "63"> </td>
-           <td value = "64"> </td>
-           <td value = "65"> </td>
-         </tr>
-          <tr>
-           <th>7교시</th>
-           <td value = "71"> </td>
-           <td value = "72"> </td>
-           <td value = "73"> </td>
-           <td value = "74"> </td>
-           <td value = "75"> </td>
-         </tr>
-         <tr>
-          <th>8교시</th>
-          <td value = "81"> </td>
-          <td value = "82"> </td>
-          <td value = "83"> </td>
-          <td value = "84"> </td>
-          <td value = "85"> </td>
-         </tr>
-       
-       </table>
-       <input type = "submit" id = "SignUpComplete" value = "회원가입 완료" class="btn-3"/>
-       </body>
+  <div>
+    <header>
+      Team Schedule Matching System
+    </header>
+  </div>
+  <div id = "container">
+    <h1>시간표 등록</h1>
+    <table >
+      <tr>
+        <th> </th>
+        <th>월</th>
+        <th>화</th>
+        <th>수</th>
+        <th>목</th>
+        <th>금</th>
+      </tr>
+        <tr>
+        <th>1교시</th>
+        <td value = "11"> </td>
+        <td value = "12"> </td>
+        <td value = "13"></td>
+        <td value = "14"></td>
+        <td value = "15"></td>
+       </tr>
+        <tr>
+        <th>2교시</th>
+        <td value = "21"> </td>
+        <td value = "22"> </td>
+        <td value = "23"> </td>
+        <td value = "24"> </td>
+        <td value = "25"> </td>  
+      </tr>
+        <tr>
+        <th>3교시</th>
+        <td value = "31"> </td>
+        <td value = "32"> </td>
+        <td value = "33"></td>
+        <td value = "34"></td>
+        <td value = "35"> </td>
+      </tr>
+       <tr>
+        <th>4교시</th>
+        <td value = "41"> </td>
+        <td value = "42"> </td>
+        <td value = "43"> </td>
+        <td value = "44"> </td>
+        <td value = "45"> </td>
+      </tr>
+       <tr>
+        <th>5교시</th>
+        <td value = "51"> </td>
+        <td value = "52"> </td>
+        <td value = "53"> </td>
+        <td value = "54"> </td>
+        <td value = "55"> </td>
+      </tr>
+       <tr>
+        <th>6교시</th>
+        <td value = "61"> </td>
+        <td value = "62"> </td>
+        <td value = "63"> </td>
+        <td value = "64"> </td>
+        <td value = "65"> </td>
+      </tr>
+       <tr>
+        <th>7교시</th>
+        <td value = "71"> </td>
+        <td value = "72"> </td>
+        <td value = "73"> </td>
+        <td value = "74"> </td>
+        <td value = "75"> </td>
+      </tr>
+      <tr>
+       <th>8교시</th>
+       <td value = "81"> </td>
+       <td value = "82"> </td>
+       <td value = "83"> </td>
+       <td value = "84"> </td>
+       <td value = "85"> </td>
+      </tr>
+    </table>
+    <input type = "submit" id = "SignUpComplete" value = "회원가입 완료" class="btn-3"/>
+  </div>
+  </body>
 </html>

@@ -2,18 +2,34 @@
 <head>
     <title>Document</title>
     <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" href = "css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Raleway&display=swap" rel="stylesheet">
     <script src="jquery-3.4.1.min.js"></script>
+    <script src = "js/bootstrap.js"></script>
     <script src="team.js"></script>
     <style type="text/css">
          #teamMemberList{
             flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        #teamHeader{
+            padding-left: 50px;
+        }
+        body {
+            font-family: 'Raleway', sans-serif;
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: "center";
         }
         #dTeamInfo{
             padding-top:69px;
             flex-grow: 1;
         }
         #dNotice{
-            flex-grow: 1;    
+            flex-grow: 1; 
+        }
+        #dNotice h3{
+            padding-left: 50px; 
         }
         #dSchedule{
             text-align: center;
@@ -31,8 +47,6 @@
             flex-direction: column;
         }
         #right {
-    
-            
             width : 50%;
             display : flex;
             flex-direction: column;
@@ -43,23 +57,25 @@
             width: 700px;
         }
         table { 
-                border: 1px solid black;
-                border-collapse: collapse;
-                text-align: center;
-                width : 95%;
-                padding : 3px;
-                margin : 5px;
-          
-            }
+            text-align: center;
+            width : 95%;
+            padding : 3px;
+            margin : 5px;
+            font-size : 13px;
+        }
+          #dSchedule *{
+            margin-left: auto; 
+            margin-right: auto;
+        } 
       
-        td,th {
+        #dSchedule td,#dSchedule th {
                 border: 1px solid black;
                 border-collapse: collapse;
                 text-align: center;
                 padding: 3px;
             }
         
-        h1 {
+        h3 {
             display: inline;
         }
         
@@ -92,24 +108,27 @@
         color: #777777;
         font-size: 1em;
         font-weight: bold;
-        margin: 0.3em auto;
+        margin: 0.3rem;
         padding: 0.2em 0.6em;
         position: relative;
         text-transform: uppercase;
+        }
+        #aginReadschedule, #writeNotice {
+            margin: 0.3rem;
+            padding: 0.2em 0.6em;
+            float : right;
         }
         
 
 
         button:hover {
         color: #AAAAAA;
-        font-family: 'Hanna', sans-serif;
         }
         
         
         #goBeforePage:hover,
         #aginReadschedule:hover{
         color: #AAAAAA;
-        font-family: 'Hanna', sans-serif;
         }
 
         .btn-3::after {
@@ -125,9 +144,12 @@
         top: 0;
         width: 100%;
         }
+        .table td,
+        .table th{
+            padding : 0.25rem;
+        }
         
         #noticeList{
-            font-size:95%;
             width:100%;
         }
         
@@ -143,30 +165,38 @@
     <div id = "main">
             <div id = "left"> 
                     <div id = "teamMemberList">
+                        <div>
                             <button id = "goBeforePage">뒤로가기</button><br>
-                            <h1>팀 원</h1>
+                        </div>
+                        <div id = "teamHeader">
+                            <h3>팀 원</h3>
                             <button id = "aginReadschedule">공강 다시 조회</button>
-                            <table cellspacing = "1" id = "MemberList">
-                                <tr bgcolor = "#cdfdee" id = "MemberMenu">
-                                    <th >No.</th>
-                                    <th >ID</th>
-                                    <th >이름</th>
-                                    <th >소속</th>
-                                    <th >선택</th>
-                                </tr>
+                        </div>
+                            <table cellspacing = "1" id = "MemberList" class ="table">
+                                <thead class ="thead-dark">
+                                    <tr id = "MemberMenu">
+                                        <th >No.</th>
+                                        <th >ID</th>
+                                        <th >이름</th>
+                                        <th >소속</th>
+                                        <th >선택</th>
+                                    </tr>
+                                </thead>
                             </table>       
                         </div>
                         <div id = "dNotice">
-                            <h1>공지사항</h1>
+                            <h3>공지사항</h3>
                             <button id = "writeNotice">공지사항 작성</button>
-                            <table bfcolor = "#cdfdee" cellspacing="1" id = "NoticeList">
-                                <tr>
-                                    <th bgcolor = "#cdfdee">No.</th>
-                                    <th bgcolor = "#cdfdee" >공지내용</th>
-                                    <th bgcolor = "#cdfdee" >이름</th>
-                                    <th bgcolor = "#cdfdee" >날 짜</th>
-                                    <td style=" border : 1px solid white" ></td>
-                                </tr>
+                            <table id = "NoticeList" class = "table">
+                                <thead class ="thead-dark">
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>공지내용</th>
+                                        <th>이름</th>
+                                        <th>날 짜</th>
+                                        <td></td>
+                                    </tr>
+                                </thead>
                             </table> 
                         </div>
                     
@@ -174,19 +204,22 @@
             </div>
              <div id = "right">
                 <div id = "dTeamInfo">
-                    <table bfcolor = "#cdfdee" cellspacing = "1">
-                        <tr>
-                            <td id = "TeamId">팀 ID</td>
-                        </tr>
-                        <tr>
-                            <td id = "TeamName">팀 이름 </td>
-                        </tr>
-                      
+                    <table class ="table">
+                        <thead class ="thead-dark">
+                            <tr>
+                                <th id = "TeamId">팀 ID</td>
+                            </tr>
+                        </thead>
+                        <thead class ="thead-dark">
+                            <tr>
+                                <th id = "TeamName">팀 이름 </td>
+                            </tr>
+                        </thead>
                     </table>
                 </div>
                 
                 <div id = dSchedule>
-                    <h1>공강 시간표</h1>
+                    <h3>공강 시간표</h3>
                     <table >
                         <tr >
                           <th> </th>

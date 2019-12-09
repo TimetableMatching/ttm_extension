@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     $('td').click(function () {
         if( this.style.backgroundColor == "rgb(102, 102, 153)"){
-            this.style.backgroundColor   = "white";
+            this.style.backgroundColor   ="";
         }else{
             this.style.backgroundColor  = "rgb(102, 102, 153)";
         }

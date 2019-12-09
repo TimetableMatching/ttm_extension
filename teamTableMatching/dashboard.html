@@ -2,12 +2,23 @@
 <head>
     <title>Document</title>
     <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" href = "css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Raleway&display=swap" rel="stylesheet">
     <script src="jquery-3.4.1.min.js"></script>
+    <script src = "js/bootstrap.js"></script>
     <script src="dashboard.js"></script>
     <style type="text/css">
         @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
          #dTeamList{
             flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        body {
+            font-family: 'Raleway', sans-serif;
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: "center";
         }
         #dUserInfo{
             flex-grow: 1;
@@ -15,6 +26,9 @@
         }
         #dNotice{
             flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         #dSchedule{
             text-align: center;
@@ -39,10 +53,8 @@
             display : flex;
             height: 550px;
             width: 700px;
-            font-family: 'Hanna', sans-serif;
         }
         table {
-                border: 1px solid black;
                 border-collapse: collapse;
                 text-align: center;
                 width : 80%;
@@ -51,29 +63,21 @@
                 text-align :center;
             }
       
-        td,th {
+        #dSchedule td, #dSchedule th {
                 border: 1px solid black;
                 border-collapse: collapse;
                 text-align: center;
                 padding: 3px;
             }
         
-        .csstable{
-            border-top: 1px solid black;
-                border-collapse: collapse;
-                text-align: center;
-                width : 80%;
-                padding : 5px;
-                margin : 5px;
-                text-align :center;
-        }
+       
         .csstd,.csstr{
             border-bottom: 1px solid black;
             border-collapse: collapse;
             text-align: center;
             padding: 3px;
         }
-        h1 {
+        h3 {
             display: inline;
         }
 
@@ -109,10 +113,7 @@
 
         button:hover {
         color: #777777;
-        font-family: 'Hanna', sans-serif;
         }
-
-
         .btn-3::after {
         height: 0;
         left: 50%;
@@ -126,48 +127,63 @@
         top: 0;
         width: 100%;
         }
-        .hn{font-family: 'Hanna', sans-serif;}
         #withdrawal{
             margin-left:5px;
-        }
-        .tablehead{
-            background : #cdfdee;
         }
         #noticeList{
             font-size:95%;
             width:100%;
         }
         tr.teamEntry:hover { background-color: #DDDDDD; }
+        #dNotice td{
+            font-size :12px;
+        }
+        .table td,
+        .table th{
+            padding : 0.25rem;
+        }
+        #dTeamManage {
+            margin-left: 40px;
+        }
+        #dUpdateSchedule{
+            margin-left: 20px;
+        }
     </style>
 </head>
 <body>
     <div>
        <header>
-           DashBoard
+            Team Schedule Matching System DashBoard
        </header>
     </div>
     <div id = "main">
             <div id = "left"> 
                     <div id = "dTeamList">
-                            <h1 class="hn">팀 목록</h1>
+                        <div>
+                            <h3 class="hn">팀 목록</h3>
                             <button id = "dTeamManage" class = "btn-3">팀 관리</button>
-                            <table cellspacing = "1" id = "TeamList" class="csstable">
-                                <tr id = "TeamMenu" class="tablehead">
+                        </div>
+                        <table  id = "TeamList" class = "table" >
+                            <thead class="thead-dark">
+                                <tr id = "TeamMenu">
                                     <th>No.</th>
                                     <th >팀 명</th>
                                     <th >인원</th>
                                     <th >팀 ID</th>
                                 </tr>
-                            </table>       
+                            </thead>
+                        </table>       
                         </div>
                         <div id = "dNotice">
-                            <h1>공지사항</h1>
-                            <table cellspacing="1" id = "NoticeList">
-                                <tr id = "NoticeMenu" class="tablehead">
+                            <h3>공지사항</h3>
+                            <table class = "table"   id = "NoticeList">
+                                <tr id = "NoticeMenu">
+                                    <thead class="thead-dark">
                                     <th >No.</th>
                                     <th >공지내용</th>
                                     <th >팀 명</th>
                                     <th >날 짜</th>
+                                    </thead>
                                 </tr>
                             </table> 
                         </div>
@@ -177,25 +193,25 @@
              <div id = "right">
                 <div id = "dUserInfo">
                     <button id="withdrawal" class = "btn-3">회원탈퇴</button>
-                    <table bfcolor = "#cdfdee" cellspacing = "1">
-                        <tr>
-                            <td id = "UserId">ID</td>
-                        </tr>
-                        <tr>
-                            <td id = "Organization">소속</td>
-                        </tr>
-                        <tr>
-                            <td id = "UserName">이름</td>
-                        </tr>
+                    <table class = "table" >
+                        <thead>
+                            <tr class="thead-dark">
+                                    <th id = "UserId">ID</td>
+                            </tr>
+                            <tr class="thead-dark">
+                                <th id = "Organization">소속</td>
+                            </tr>
+                            <tr class="thead-dark">
+                                <th id = "UserName">이름</td>
+                            </tr>
+                        </thead>
                     </table>
                 </div>
                 
                 <div id = dSchedule>
-                    <h1>내 시간표</h1>
+                    <h3>내 시간표</h3>
                     <button id = "dUpdateSchedule" class = "btn-3">시간표 변경</button>
                     <table >
-       
-       
                         <tr>
                           <th> </th>
                           <th >월</th>

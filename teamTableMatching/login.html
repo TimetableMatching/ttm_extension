@@ -2,13 +2,21 @@
 <head>
     <title>Document</title>
     <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" href = "css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Raleway&display=swap" rel="stylesheet">
     <script src="jquery-3.4.1.min.js"></script>
     <script src="loginScript.js"></script>
+    <script src = "js/bootstrap.js"></script>
+    
     <style>
-        #size {
-            height: 550px;
+        #container {
+            height: 500px;
             width: 700px;
-
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            top : 10%;
         }
         button,
         button::after {
@@ -44,14 +52,10 @@
         text-transform: uppercase;
         }
         
-
-
         button:hover {
         color: #AAAAAA;
         font-family: 'Hanna', sans-serif;
         }
-        
-        
         #SignInSubmit:hover{
         color: #AAAAAA;
         font-family: 'Hanna', sans-serif;
@@ -70,6 +74,23 @@
         top: 0;
         width: 100%;
         }
+        body {
+            font-family: 'Raleway', sans-serif;
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: "center";
+        }
+
+        .buttons{
+            display: flex;
+            align-items: center;
+        }
+        #SignInSubmit{
+            margin-left: 30px;
+            margin-right: 20px;
+        }
+        input {
+            margin : 4px;
+        }
     </style>
 </head>
 <body>
@@ -78,19 +99,19 @@
            Team Schedule Matching System
        </header>
     </div>
-    <div id = "size">
+    <div id = "container">
         <h1>로그인</h1>
-        <table bgcolor = "#cdfdee" cellspacing = "1" >
+        <table class = "table-hover" >
             <form action = "" method = "">
                 <tr>
-                    <td text-align="center">ID</td>
+                    <td >ID</td>
                     <td>
                         <input type="text" name = "Id" id = "Id">
                         
                     </td>
                 </tr>
                 <tr>
-                    <td text-align="center">Password</td>
+                    <td>Password</td>
                     <td>
                         <input type="password" name = "Password" id = "Password" >
                     </td>
@@ -98,9 +119,10 @@
                
             </form>
         </table>       
-           
-           <input type = "submit" id = "SignInSubmit" value = "로그인" class="btn-3"/>
-            <a href="signUp.html"><button class="btn-3">회원가입</button></a>
+           <div class = "buttons" >
+                <input type = "submit" id = "SignInSubmit" value = "로그인" class="btn-3"/>
+                <a href="signUp.html"><button class="btn-3">회원가입</button></a>
+           </div>
     </div>
 </body>
 </html>

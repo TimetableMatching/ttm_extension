@@ -2,19 +2,21 @@
 <head>
     <title>Document</title>
     <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" href = "css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Raleway&display=swap" rel="stylesheet">
     <script src="jquery-3.4.1.min.js"></script>
+    <script src = "js/bootstrap.js"></script>
     <script src="teamManage.js"></script>
     <style type="text/css">
         #teamManage{
-            text-align: center;
-            margin-left: auto; 
-            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         #main {
-            display : flex;
             height: 550px;
             width: 700px;
-            margin:auto;
         }
 
         select{
@@ -84,6 +86,16 @@
         top: 0;
         width: 100%;
         }
+        #steamSelect{
+            width: 150px;
+        }
+        #goBeforePage{
+            margin: 0.3rem;
+            padding: 0.2em 0.6em;
+        }
+        #buttons{
+            margin-left : 55px;
+        }
     </style>
 </head>
 <body>
@@ -93,15 +105,18 @@
        </header>
     </div>
     <div id = "main">  
+        <button id = "goBeforePage">뒤로가기</button><br>  
         <div id = "teamManage">
-            <h1 >팀 관리</h1>
-            <button id = "goBeforePage">뒤로가기</button><br>  
-            팀 선택
-            <select id = "steamSelect">
-                <!--한글 아래부분 잘리는 문제. css추후 설정-->
+            <h3 >팀 관리</h3>
+            <div>
+                팀 선택
+                <select id = "steamSelect">
+            </div>
             </select>
-            <input type="button" id = "teamEnroll" value="팀 등록"/>
-            <input type="button" id = "teamDelete" value="팀 삭제"/>
+            <div id = "buttons">
+                <input type="button" id = "teamEnroll" value="팀 등록"/>
+                <input type="button" id = "teamDelete" value="팀 삭제"/>
+            </div>
             </form>
         </div>
 

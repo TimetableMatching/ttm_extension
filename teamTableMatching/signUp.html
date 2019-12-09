@@ -2,13 +2,23 @@
 <head>
     <title>Document</title>
     <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" href = "css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Raleway&display=swap" rel="stylesheet">
     <script src="jquery-3.4.1.min.js"></script>
+    <script src = "js/bootstrap.js"></script>
     <script src="signUpScript.js"></script>
+    
 
     <style>
-        #size {
-            height: 550px;
+        #container {
+            height: 500px;
             width: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            top : 10%;
+
         }
         #SignUpSubmit,
         #GoBackBtn,
@@ -65,6 +75,19 @@
         top: 0;
         width: 100%;
         }
+        input {
+            margin : 4px;
+        }
+        .buttons{
+            display: flex;
+            align-items: center;
+        }
+        #GoBackBtn{
+            margin-left: 20px;
+        }
+        #SignUpSubmit{
+            margin-left: 50px;  
+        }
     </style>
 </head>
 <body>
@@ -73,9 +96,9 @@
            Team Schedule Matching System
        </header>
     </div>
-    <div id = "size"> 
+    <div id = "container"> 
         <h1>회원가입</h1>
-        <table bgcolor = "#cdfdee" cellspacing = "1" >
+        <table class = "table-hover">
             <form action="scheduleReg.html" accept-charset="utf-8" id="signup_info" method="GET">
                 <tr>
                     <td text-align="center">ID</td>
@@ -103,9 +126,10 @@
                 </tr>
             
         </table>       
-        
-        <input type = "submit" id = "SignUpSubmit" value = "다음" class="btn-3">
-        <input type = "button" id = "GoBackBtn" value="뒤로가기" class="btn-3">
+        <div class = "buttons">
+                <input type = "submit" id = "SignUpSubmit" value = "다음" class="btn-3">
+                <input type = "button" id = "GoBackBtn" value="뒤로가기" class="btn-3">
+        </div>
             
     </form>
     </div>
