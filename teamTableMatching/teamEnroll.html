@@ -2,7 +2,10 @@
 <head>
     <title>Document</title>
     <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" href = "css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Raleway&display=swap" rel="stylesheet">
     <script src="jquery-3.4.1.min.js"></script>
+    <script src = "js/bootstrap.js"></script>
     <script src="teamEnroll.js"></script>
     <style type="text/css">
          #teamMemberList{
@@ -15,30 +18,12 @@
         }
         #main {
             display : flex;
-            height: 550px;
+            height: 500px;
             width: 700px;
+            font-family: 'Raleway', sans-serif;
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: "center";
         }
-        table { 
-                border: 1px solid black;
-                border-collapse: collapse;
-                text-align: center;
-                width : 95%;
-                padding : 3px;
-                margin : 5px;
-          
-            }
-      
-        td,th {
-                border: 1px solid black;
-                border-collapse: collapse;
-                text-align: center;
-                padding: 3px;
-            }
-        h1 {
-            margin:0 auto;
-            display:inline;
-        }
-
         button,
         button::after {
         -webkit-transition: all 0.3s;
@@ -74,11 +59,6 @@
         position: relative;
         text-transform: uppercase;
         }
-        #teamId{
-            margin-left:12px;
-            margin-bottom:15px;
-        }
-
 
         button:hover {
         color: #AAAAAA;
@@ -106,6 +86,10 @@
         top: 0;
         width: 100%;
         }
+        .table td,
+        .table th{
+            padding : 0.25rem;
+        }
 
     </style>
 </head>
@@ -118,21 +102,31 @@
     <div id = "main">
             <div id = "left"> 
                     <button id = "goBeforePage">뒤로가기</button><br>
-                    팀 이름
-                    <input type = "text" id="teamName"><br>
-                    팀 ID
-                    <input type = "text" id="teamId" readonly="readonly"><br>
+                    <table class = "table">
+                        <thead class = "thead-dark">    
+                            <tr>
+                                <th class = "table">팀 이름</th>
+                                <td><input type = "text" id="teamName"></td>
+                            </tr>
+                            <tr>
+                                 <th class = "table"> 팀 ID</th>
+                                 <td><input type = "text" id="teamId" readonly="readonly"></td>
+                            </tr>
+                        </thead>
+                    </table>
                     팀원 조회<br>
                     <input type = "text" id="memberId">
                     <input type="button" id="searchMember" value="조회하기">
                     <input type="button" id="addMember" value="추가하기">
 
-                    <table  cellspacing = "1" id = "newTeamTable">
-                        <tr bgcolor = "#cdfdee">
-                            <td>No.</td>
-                            <td text-align="center">ID</td>
-                            <td text-align="center">이름</td>
-                            <td text-align="center">소속</td>
+                    <table id = "newTeamTable" class = "table">
+                        <tr>
+                            <thead class = "thead-dark">
+                                <th>No.</td>
+                                <th text-align="center">ID</td>
+                                <th text-align="center">이름</td>
+                                <th text-align="center">소속</td>
+                            </thead>
                         </tr>
                         
                     </table>             

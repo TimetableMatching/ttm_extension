@@ -2,12 +2,15 @@
 <head>
     <title>Document</title>
     <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" href = "css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Raleway&display=swap" rel="stylesheet">
     <script src="jquery-3.4.1.min.js"></script>
+    <script src = "js/bootstrap.js"></script>
     <script src="noticeUpdate.js"></script>
     <style>
         #main {
             display : flex;
-            height: 550px;
+            height: 500px;
             width: 700px;
             flex-direction: column;
             margin : 5px;
@@ -27,11 +30,8 @@
             text-align: center;
             padding: 5px;
         }
-        button, input#noticeReg{
-            margin : 5px;
-            width: 70px;
-        }
-        h1{
+
+        h3{
             display: inline;
         }
         input {
@@ -62,29 +62,33 @@
         #noticeUpdate,
         #noticeDelete{
             background: none;
-        border: 2px solid #777777;
-        border-radius: 5px;
-        color: #777777;
-        font-size: 1em;
-        font-weight: bold;
-        margin: 0.3em auto;
-        padding: 0.2em 0.6em;
-        position: relative;
-        text-transform: uppercase;
+            border: 2px solid #777777;
+            border-radius: 5px;
+            color: #777777;
+            font-size: 1em;
+            font-weight: bold;
+            margin: 0.5em auto;
+            padding: 0.2em 0.6em;
+            position: relative;
+            text-transform: uppercase;
         }
-        
+        #noticeUpdate{
+            margin-left : 35px;
+        }
+        #noticeDelete{
+            margin-left : 10px;
+        }
 
 
         button:hover {
         color: #AAAAAA;
-        font-family: 'Hanna', sans-serif;
+
         }
         
         
         #noticeUpdate:hover,
         #noticeDelete:hover{
         color: #AAAAAA;
-        font-family: 'Hanna', sans-serif;
         }
 
         .btn-3::after {
@@ -100,6 +104,18 @@
         top: 0;
         width: 100%;
         }
+        #dTeamInfo {
+            width: 30%;
+        }
+        .table td,
+        .table th{
+            padding : 0.25rem;
+        }
+        #noticeUpdateSection{
+            display : flex;
+            flex-direction: column;
+            width: 30%;
+        }
     </style>
 </head>
 <body>
@@ -114,20 +130,28 @@
             <button id = "GoBackBtn">뒤로가기</button><br>  
         </div>
         <div id = "dTeamInfo">
-            <table bfcolor = "#cdfdee" cellspacing = "1">
-                <tr>
-                    <td id = "TeamId">팀 ID</td>
-                </tr>
-                <tr>
-                    <td id = "TeamName">팀 이름 </td>
-                </tr>
+            <table class = "table">
+                <thead class ="thead-dark">
+                    <tr>
+                        <th id = "TeamId">팀 ID</td>
+                    </tr>
+                </thead>
+                <thead class ="thead-dark">
+                    <tr>
+                        <th id = "TeamName">팀 이름 </td>
+                    </tr>
+                </thead>
             </table>
         </div>
         <div>
-            <h2>공지사항 내용</h2>
-            <input type="text" id = "notice"  >
-            <input type="button" value="수정" id = "noticeUpdate"> 
-            <input type="button" value= "삭제" id = "noticeDelete"> 
+            <div id = "noticeUpdateSection">
+                <h3>공지사항 내용</h3>
+                <input type="text" id = "notice"  >
+                <div>
+                    <input type="button" value="수정" id = "noticeUpdate"> 
+                    <input type="button" value= "삭제" id = "noticeDelete"> 
+                </div>
+            </div>
         </div>
     </div>
 </body>
